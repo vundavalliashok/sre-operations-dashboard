@@ -92,17 +92,24 @@ def utilization_chart(metric: str, color: str):
         margin={"l": 12, "r": 12, "t": 16, "b": 8},
         plot_bgcolor="rgba(0,0,0,0)",
         paper_bgcolor="rgba(0,0,0,0)",
+        font={"color": "#F4F7FB"},
         showlegend=False,
         bargap=0.48,
     )
-    figure.update_xaxes(showgrid=False, title=None, linecolor="rgba(128,128,128,0.2)")
+    figure.update_xaxes(
+        showgrid=False,
+        title=None,
+        linecolor="rgba(148,163,184,0.35)",
+        tickfont={"color": "#CBD5E1"},
+    )
     figure.update_yaxes(
         range=[0, 105],
         ticksuffix="%",
         title=None,
         showgrid=True,
-        gridcolor="rgba(128,128,128,0.16)",
+        gridcolor="rgba(148,163,184,0.2)",
         zeroline=False,
+        tickfont={"color": "#CBD5E1"},
     )
     return figure
 
